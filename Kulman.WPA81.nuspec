@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Kulman.WPA81</id>
+    <version>1.0.0</version>
+    <title>Kulman.WPA81</title>
+    <authors>Igor Kulman</authors>
+    <owners></owners>
+    <description>
+      Collection of utilities for Windows Phone 8.1 XAML apps
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      Collection of utilities for Windows Phone 8.1 XAML apps 
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/igorkulman/Kulman.WPA81</projectUrl>
+    <iconUrl>https://dl.dropboxusercontent.com/u/73642/Nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.github.com/igorkulman/Kulman.WPA81/master/LICENSE.txt</licenseUrl>
+    <copyright>Copyright 2014</copyright>
+    <dependencies>
+    </dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="Kulman.WPA81.dll" target="lib\wpa81\Kulman.WPA81.dll" />
+    <file src="Kulman.WPA81.pdb" target="lib\wpa81\Kulman.WPA81.pdb" />
+  </files>
+</package>
