@@ -67,10 +67,10 @@ namespace Kulman.WPA81.Services
                 try
                 {
                     var licenses = CurrentApp.LicenseInformation.ProductLicenses;
-                    if (licenses[productId].IsConsumable && licenses[productId].IsActive)
-                    {
-                        CurrentApp.ReportProductFulfillment(productId);
-                    }
+                    //if (licenses[productId].IsConsumable && licenses[productId].IsActive)
+                    //{
+                    //    CurrentApp.ReportProductFulfillment(productId);
+                    //}
                 }
                 catch (Exception e)
                 {
