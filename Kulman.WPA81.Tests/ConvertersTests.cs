@@ -26,6 +26,14 @@ namespace Kulman.WPA81.Tests
         }
 
         [TestMethod]
+        public void InvertedBooleanToVisibilityConverterShouldWork()
+        {
+            var converter = new InvertedBooleanToVisibilityConverter();
+            Assert.AreEqual(Visibility.Collapsed, (Visibility)converter.Convert(true, typeof(bool), null, "en-US"));
+            Assert.AreEqual(Visibility.Visible, (Visibility)converter.Convert(false, typeof(bool), null, "en-US"));
+        }
+
+        [TestMethod]
         public void BooleanToVisibilityConverterShouldWorkInverterd()
         {
             var converter = new BooleanToVisibilityConverter()

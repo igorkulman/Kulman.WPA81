@@ -89,11 +89,14 @@
     <Compile Include="Attributes\SingletonAttribute.cs" />
     <Compile Include="Code\DelegateCommand.cs" />
     <Compile Include="Code\SortedObservableCollection.cs" />
+    <Compile Include="Code\StringIOExtensions.cs" />
     <Compile Include="Converters\Abstract\BaseConverter.cs" />
     <Compile Include="Converters\Abstract\BaseVisibilityConverter.cs" />
     <Compile Include="Converters\BooleanNegateConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\CountToVisibilityConverter.cs" />
+    <Compile Include="Converters\InvertedBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\InvertedObjectToVisibilityConverter.cs" />
     <Compile Include="Converters\LowerCaseConverter.cs" />
     <Compile Include="Converters\ObjectToVisibilityConverter.cs" />
     <Compile Include="Converters\UpperCaseConverter.cs" />
@@ -108,7 +111,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>GitHubLink $(ProjectDir) -u https://github.com/igorkulman/Kulman.WPA81</PostBuildEvent>
+    <PostBuildEvent>GitLink $(SolutionDir) -u https://github.com/igorkulman/Kulman.WPA81</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
