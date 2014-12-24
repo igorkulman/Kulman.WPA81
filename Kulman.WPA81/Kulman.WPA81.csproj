@@ -88,6 +88,7 @@
     <Compile Include="Attributes\PerRequestAttribute.cs" />
     <Compile Include="Attributes\SingletonAttribute.cs" />
     <Compile Include="Code\DelegateCommand.cs" />
+    <Compile Include="Code\DialogHelper.cs" />
     <Compile Include="Code\Extensions.cs" />
     <Compile Include="Code\SortedObservableCollection.cs" />
     <Compile Include="Code\Tilt.cs" />
