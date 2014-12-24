@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Kulman.WPA81</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>Kulman.WPA81</title>
     <authors>Igor Kulman</authors>
     <owners></owners>
@@ -26,7 +26,7 @@
     <tags></tags>
   </metadata>
   <files>
-    <file src="Kulman.WPA81\bin\Release\Kulman.WPA81.dll" target="lib\wpa81\Kulman.WPA81.dll" />
-    <file src="Kulman.WPA81\bin\Release\Kulman.WPA81.pdb" target="lib\wpa81\Kulman.WPA81.pdb" />
+    <file src="Kulman.WPA81\bin\Release\Kulman.WPA81.dll" target="lib\portable-win81+wpa81\Kulman.WPA81.dll" />
+    <file src="Kulman.WPA81\bin\Release\Kulman.WPA81.pdb" target="lib\portable-win81+wpa81\Kulman.WPA81.pdb" />
   </files>
 </package>
