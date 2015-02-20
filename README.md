@@ -1,7 +1,9 @@
 Kulman.WPA81
 ============
 
-Collection of utilities and services for Windows Phone 8.1 XAML apps
+[![Build status](https://ci.appveyor.com/api/projects/status/pylnk1oohetm8xub?svg=true)](https://ci.appveyor.com/project/igorkulman/kulman-wpa81)
+
+Collection of utilities and services for Windows Phone 8.1 XAML and Windows 8.1 apps
 
     PM> Install-Package Kulman.WPA81
 
