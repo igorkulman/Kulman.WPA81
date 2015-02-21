@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Kulman.WPA81</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <title>Kulman.WPA81</title>
     <authors>Igor Kulman</authors>
     <owners></owners>
@@ -19,7 +19,7 @@
     <iconUrl>https://dl.dropboxusercontent.com/u/73642/Nuget.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.github.com/igorkulman/Kulman.WPA81/master/LICENSE.txt</licenseUrl>
-    <copyright>Copyright 2014</copyright>
+    <copyright>Copyright 2014 - 2015</copyright>
     <dependencies>
     </dependencies>
     <references></references>
