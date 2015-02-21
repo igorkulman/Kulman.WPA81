@@ -35,5 +35,31 @@ namespace Kulman.WPA81.Code
                 collection.Add(item);
             }
         }
+
+        public static T As<T>(this object o) where T : class
+        {
+            return o as T;
+        }
+
+        public static bool Is<T>(this object o)
+        {
+            return o is T;
+        }
+
+        public static bool Isnt<T>(this object o)
+        {
+            return !(o is T);
+        }
+
+        public static T Cast<T>(this object o)
+        {
+            return (T)o;
+        }
+
+        public static T IfNullThen<T>(this T value, T defaultValue)
+            where T : class
+        {
+            return value ?? defaultValue;
+        }
     }
 }
