@@ -3,7 +3,11 @@ using Windows.UI.Xaml;
 using Kulman.WPA81.Converters;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
+#if WINDOWS_PHONE_APP
 namespace Kulman.WPA81.Tests
+#else
+namespace Kulman.WPA81.Tests.Windows
+#endif
 {
     [TestClass]
     public class ConvertersTests
