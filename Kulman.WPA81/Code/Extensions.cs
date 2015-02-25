@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Windows.UI.Xaml;
 
 namespace Kulman.WPA81.Code
 {
@@ -33,6 +35,29 @@ namespace Kulman.WPA81.Code
             foreach (var item in items)
             {
                 collection.Add(item);
+            }
+        }
+
+        /// <summary>
+        /// Toggles visibility of a framework element
+        /// </summary>
+        /// <param name="elem">Framewotk element</param>
+        public static void ToggleVisibility(this FrameworkElement elem)
+        {
+            elem.Visibility = elem.Visibility == Visibility.Collapsed ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        /// <summary>
+        /// Executes given action on each item in the collection
+        /// </summary>
+        /// <typeparam name="T">Type</typeparam>
+        /// <param name="enumeration">Collection of items</param>
+        /// <param name="action">Action to execute</param>
+        public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
+        {
+            foreach (T item in enumeration)
+            {
+                action(item);
             }
         }
     }
