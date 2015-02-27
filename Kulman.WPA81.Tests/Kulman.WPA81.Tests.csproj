@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertersTests.cs" />
+    <Compile Include="DeviceInformationServiceTests.cs" />
     <Compile Include="ExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
