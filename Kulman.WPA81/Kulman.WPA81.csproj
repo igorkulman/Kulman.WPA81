@@ -93,6 +93,7 @@
     <Compile Include="Code\SortedObservableCollection.cs" />
     <Compile Include="Code\Tilt.cs" />
     <Compile Include="Converters\Abstract\BaseConverter.cs" />
+    <Compile Include="Converters\Abstract\BaseConverterWithParameter.cs" />
     <Compile Include="Converters\Abstract\BaseVisibilityConverter.cs" />
     <Compile Include="Converters\BooleanNegateConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
