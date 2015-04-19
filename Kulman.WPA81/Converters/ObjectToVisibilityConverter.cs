@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using JetBrains.Annotations;
 using Kulman.WPA81.Converters.Abstract;
 
 namespace Kulman.WPA81.Converters
 {
     public class ObjectToVisibilityConverter : BaseVisibilityConverter<object>
     {
-        protected override bool? ConvertToVisibility(object value)
+        protected override bool? ConvertToVisibility([CanBeNull] object value)
         {
             if (value is string)
             {

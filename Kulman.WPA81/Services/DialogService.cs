@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using JetBrains.Annotations;
 using Kulman.WPA81.Interfaces;
 
 namespace Kulman.WPA81.Services
@@ -18,7 +19,7 @@ namespace Kulman.WPA81.Services
         /// <param name="okText">OK text (optional)</param>
         /// <param name="cancelText">Cancel text (optional)</param>
         /// <returns>True if ok pressed, false otherwise</returns>
-        public async Task<bool> ShowMessageDialog(string message, string title, string okText, string cancelText)
+        public async Task<bool> ShowMessageDialog([NotNull] string message, [NotNull] string title, [CanBeNull] string okText, [CanBeNull] string cancelText)
         {
             bool result = false;
             var dialog = new MessageDialog(message, title);

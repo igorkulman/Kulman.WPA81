@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using JetBrains.Annotations;
 
 namespace Kulman.WPA81.Interfaces
 {
@@ -12,6 +13,6 @@ namespace Kulman.WPA81.Interfaces
         /// <param name="okText">OK text (optional)</param>
         /// <param name="cancelText">Cancel text (optional)</param>
         /// <returns>True if ok pressed, false otherwise</returns>
-        Task<bool> ShowMessageDialog(string message, string title, string okText = null, string cancelText = null);
+        Task<bool> ShowMessageDialog([NotNull] string message, [NotNull] string title, [CanBeNull] string okText = null, [CanBeNull] string cancelText = null);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using JetBrains.Annotations;
 using Kulman.WPA81.Converters.Abstract;
 
 namespace Kulman.WPA81.Converters
@@ -8,7 +9,8 @@ namespace Kulman.WPA81.Converters
     /// </summary>
     public class LowerCaseConverter: BaseConverter<string,string>
     {
-        public override string Convert(string value)
+        [ContractAnnotation("null => null")]
+        public override string Convert([CanBeNull] string value)
         {
             if (String.IsNullOrEmpty(value)) return null;
 

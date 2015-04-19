@@ -1,4 +1,6 @@
-﻿namespace Kulman.WPA81.Interfaces
+﻿using JetBrains.Annotations;
+
+namespace Kulman.WPA81.Interfaces
 {
     /// <summary>
     /// Interface definition for settings manipulation
@@ -10,7 +12,8 @@
         /// </summary>
         /// <param name="key">Key</param>
         /// <returns>Value</returns>
-        object Get(string key);
+        [CanBeNull]
+        object Get([NotNull] string key);
 
         /// <summary>
         /// Save a key-value pair to settings
@@ -18,13 +21,13 @@
         /// </summary>
         /// <param name="key">Key</param>
         /// <param name="value">Value</param>
-        void Set(string key, object value);
+        void Set([NotNull] string key, [CanBeNull] object value);
 
         /// <summary>
         /// Deletes value for a given key
         /// </summary>
         /// <param name="key">Key</param>
-        void Clear(string key);
+        void Clear([NotNull] string key);
 
         /// <summary>
         /// Clears all settings

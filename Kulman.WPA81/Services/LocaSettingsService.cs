@@ -1,4 +1,5 @@
 ﻿using Windows.Storage;
+using JetBrains.Annotations;
 using Kulman.WPA81.Interfaces;
 
 namespace Kulman.WPA81.Services
@@ -13,7 +14,8 @@ namespace Kulman.WPA81.Services
         /// </summary>
         /// <param name="key">Key</param>
         /// <returns>Value</returns>
-        public object Get(string key)
+        [CanBeNull]
+        public object Get([NotNull] string key)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))
             {
@@ -28,8 +30,8 @@ namespace Kulman.WPA81.Services
         /// Overwites existing
         /// </summary>
         /// <param name="key">Key</param>
-        /// <param name="value">Value</param>
-        public void Set(string key, object value)
+        /// <param name="value">Value</param>        
+        public void Set([NotNull] string key, [CanBeNull] object value)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))
             {
@@ -45,7 +47,7 @@ namespace Kulman.WPA81.Services
         /// Deletes value for a given key
         /// </summary>
         /// <param name="key">Key</param>
-        public void Clear(string key)
+        public void Clear([NotNull] string key)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))
             {

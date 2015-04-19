@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Storage;
+using JetBrains.Annotations;
 
 namespace Kulman.WPA81.Interfaces
 {
@@ -15,6 +16,6 @@ namespace Kulman.WPA81.Interfaces
         /// </summary>
         /// <param name="folder">Folder</param>
         /// <returns>Free space in bytes</returns>
-        Task<UInt64> GetFreeSpace(StorageFolder folder);
+        Task<UInt64> GetFreeSpace([NotNull] StorageFolder folder);
     }
 }

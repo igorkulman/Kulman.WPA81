@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using JetBrains.Annotations;
 
 namespace Kulman.WPA81.Interfaces
 {
@@ -12,20 +13,21 @@ namespace Kulman.WPA81.Interfaces
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>True if the product is purchased</returns>
-        bool IsPurchased(string productId);
+        bool IsPurchased([NotNull] string productId);
 
         /// <summary>
         /// Tries to purchase a product
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>True on success, false otherwise</returns>
-        Task<bool> Purchase(string productId);
+        Task<bool> Purchase([NotNull] string productId);
 
         /// <summary>
         /// Gets the price of a product
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>Product price</returns>
-        Task<string> GetPrice(string productId);        
+        [NotNull]
+        Task<string> GetPrice([NotNull] string productId);        
     }
 }
