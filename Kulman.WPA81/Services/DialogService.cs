@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using Kulman.WPA81.Code;
 using Kulman.WPA81.Interfaces;
 
 namespace Kulman.WPA81.Services
@@ -15,22 +16,22 @@ namespace Kulman.WPA81.Services
         /// </summary>
         /// <param name="message">Message</param>
         /// <param name="title">Title</param>
-        /// <param name="okText">OK text (optional)</param>
-        /// <param name="cancelText">Cancel text (optional)</param>
-        /// <returns>True if ok pressed, false otherwise</returns>
-        public async Task<bool> ShowMessageDialog(string message, string title, string okText, string cancelText)
+        /// <param name="leftButtonText">Left button text (optional)</param>
+        /// <param name="rightButtonText">Right button text (optional)</param>
+        /// <returns>Dialog result</returns>
+        public async Task<DialogResult> ShowMessageDialog(string message, string title, string leftButtonText, string rightButtonText)
         {
-            bool result = false;
+            var result = DialogResult.NothingPressed;
             var dialog = new MessageDialog(message, title);
 
-            if (!string.IsNullOrWhiteSpace(okText))
+            if (!string.IsNullOrWhiteSpace(leftButtonText))
             {
-                dialog.Commands.Add(new UICommand(okText, cmd => result = true));
+                dialog.Commands.Add(new UICommand(leftButtonText, cmd => result = DialogResult.LeftButtonPressed));
             }
 
-            if (!string.IsNullOrWhiteSpace(cancelText))
+            if (!string.IsNullOrWhiteSpace(rightButtonText))
             {
-                dialog.Commands.Add(new UICommand(cancelText, cmd => result = false));
+                dialog.Commands.Add(new UICommand(rightButtonText, cmd => result = DialogResult.RightButtonPressed));
             }
 
             await dialog.ShowAsync();

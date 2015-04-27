@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Kulman.WPA81.Code;
 
 namespace Kulman.WPA81.Interfaces
 {
@@ -9,9 +10,9 @@ namespace Kulman.WPA81.Interfaces
         /// </summary>
         /// <param name="message">Message</param>
         /// <param name="title">Title</param>
-        /// <param name="okText">OK text (optional)</param>
-        /// <param name="cancelText">Cancel text (optional)</param>
-        /// <returns>True if ok pressed, false otherwise</returns>
-        Task<bool> ShowMessageDialog(string message, string title, string okText = null, string cancelText = null);
+        /// <param name="leftButtonText">Left button text (optional)</param>
+        /// <param name="rightButtonText">Right button text (optional)</param>
+        /// <returns>Dialog result</returns>
+        Task<DialogResult> ShowMessageDialog(string message, string title, string leftButtonText = null, string rightButtonText = null);
     }
 }
