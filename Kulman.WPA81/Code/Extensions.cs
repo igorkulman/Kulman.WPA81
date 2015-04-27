@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Windows.UI.Xaml;
+using JetBrains.Annotations;
 
 namespace Kulman.WPA81.Code
 {
@@ -16,7 +17,7 @@ namespace Kulman.WPA81.Code
         /// <typeparam name="T">Item type</typeparam>
         /// <param name="set">Hash set to add to</param>
         /// <param name="items">Collection of items</param>
-        public static void AddRange<T>(this HashSet<T> set, IEnumerable<T> items)
+        public static void AddRange<T>([NotNull] this HashSet<T> set, [NotNull] IEnumerable<T> items)
         {
             foreach (var item in items)
             {
@@ -30,7 +31,7 @@ namespace Kulman.WPA81.Code
         /// <typeparam name="T">Item type</typeparam>
         /// <param name="collection">Collection to add to</param>
         /// <param name="items">Collection of items</param>
-        public static void AddRange<T>(this ObservableCollection<T> collection, IEnumerable<T> items)
+        public static void AddRange<T>([NotNull] this ObservableCollection<T> collection, [NotNull] IEnumerable<T> items)
         {
             foreach (var item in items)
             {
@@ -42,7 +43,7 @@ namespace Kulman.WPA81.Code
         /// Toggles visibility of a framework element
         /// </summary>
         /// <param name="elem">Framewotk element</param>
-        public static void ToggleVisibility(this FrameworkElement elem)
+        public static void ToggleVisibility([NotNull] this FrameworkElement elem)
         {
             elem.Visibility = elem.Visibility == Visibility.Collapsed ? Visibility.Visible : Visibility.Collapsed;
         }
@@ -53,7 +54,7 @@ namespace Kulman.WPA81.Code
         /// <typeparam name="T">Type</typeparam>
         /// <param name="enumeration">Collection of items</param>
         /// <param name="action">Action to execute</param>
-        public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
+        public static void ForEach<T>([NotNull] this IEnumerable<T> enumeration, [NotNull] Action<T> action)
         {
             foreach (T item in enumeration)
             {

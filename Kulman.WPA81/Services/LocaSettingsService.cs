@@ -10,7 +10,7 @@ namespace Kulman.WPA81.Services
     public class LocaSettingsService : ISettingsService
     {
         /// <summary>
-        /// Gets a stored value for a given key
+        /// Gets a storred value for a given key
         /// </summary>
         /// <param name="key">Key</param>
         /// <returns>Value</returns>
@@ -27,10 +27,10 @@ namespace Kulman.WPA81.Services
 
         /// <summary>
         /// Save a key-value pair to settings
-        /// Overwrites existing
+        /// Overwites existing
         /// </summary>
         /// <param name="key">Key</param>
-        /// <param name="value">Value</param>
+        /// <param name="value">Value</param>        
         public void Set([NotNull] string key, [CanBeNull] object value)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JetBrains.Annotations;
 
 namespace Kulman.WPA81.Code
 {
@@ -11,24 +12,24 @@ namespace Kulman.WPA81.Code
     {
         private readonly Func<T, int> _func;
 
-        public SortedObservableCollection(Func<T, int> func)
+        public SortedObservableCollection([NotNull] Func<T, int> func)
         {
             _func = func;
         }
 
-        public SortedObservableCollection(Func<T, int> func, IEnumerable<T> collection)
+        public SortedObservableCollection([NotNull] Func<T, int> func, [NotNull] IEnumerable<T> collection)
             : base(collection)
         {
             _func = func;
         }
 
-        public SortedObservableCollection(Func<T, int> func, List<T> list)
+        public SortedObservableCollection([NotNull] Func<T, int> func, [NotNull] List<T> list)
             : base(list)
         {
             _func = func;
         }
 
-        public void AddRange(IEnumerable<T> items)
+        public void AddRange([NotNull] IEnumerable<T> items)
         {
             foreach (var item in items)
             {

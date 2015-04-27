@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Kulman.WPA81</id>
-    <version>1.0.12</version>
+    <version>1.0.13</version>
     <title>Kulman.WPA81</title>
     <authors>Igor Kulman</authors>
     <owners></owners>
@@ -20,10 +20,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.github.com/igorkulman/Kulman.WPA81/master/LICENSE.txt</licenseUrl>
     <copyright>Copyright 2014 - 2015</copyright>
-    <dependencies>
-    </dependencies>
     <references></references>
     <tags></tags>
+    <dependencies>    
+      <group>
+      <dependency id="JetBrains.Annotations" version="9.1.1" />
+    </group>
+      </dependencies>   
   </metadata>
   <files>
     <file src="Kulman.WPA81\bin\Release\Kulman.WPA81.dll" target="lib\portable-win81+wpa81\Kulman.WPA81.dll" />

@@ -31,7 +31,7 @@ namespace Kulman.WPA81.Services
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>Product price</returns>
-        [CanBeNull]
+        [NotNull]
         public async Task<string> GetPrice([NotNull] string productId)
         {
             try

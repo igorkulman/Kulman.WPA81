@@ -27,7 +27,7 @@ namespace Kulman.WPA81.Interfaces
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>Product price</returns>
-        [CanBeNull]
+        [NotNull]
         Task<string> GetPrice([NotNull] string productId);        
     }
 }
