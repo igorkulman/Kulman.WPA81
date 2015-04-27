@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Storage;
+using JetBrains.Annotations;
 using Kulman.WPA81.Interfaces;
 
 namespace Kulman.WPA81.Services
@@ -10,12 +11,13 @@ namespace Kulman.WPA81.Services
         /// <summary>
         /// Gets the amount of free space in bytes in given folder. Typically used with ApplicationData.Current.LocalFolder
         /// </summary>
-        /// <param name="folder">Folder</param>
+        /// <param name="folder">Folder (use ApplicationData.Current.LocalFolder when in doubt)</param>
         /// <returns>Free space in bytes</returns>
-        public async Task<ulong> GetFreeSpace(StorageFolder folder)
+        [NotNull]
+        public async Task<ulong> GetFreeSpace([NotNull] StorageFolder folder)
         {
-            var retrivedProperties = await folder.Properties.RetrievePropertiesAsync(new string[] {"System.FreeSpace"});
-            return (UInt64) retrivedProperties["System.FreeSpace"];
+            var retrievedProperties = await folder.Properties.RetrievePropertiesAsync(new string[] {"System.FreeSpace"});
+            return (UInt64)retrievedProperties["System.FreeSpace"];
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Store;
+using JetBrains.Annotations;
 using Kulman.WPA81.Interfaces;
 
 namespace Kulman.WPA81.Services
@@ -17,7 +18,7 @@ namespace Kulman.WPA81.Services
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>True if the product is purchased</returns>
-        public bool IsPurchased(string productId)
+        public bool IsPurchased([NotNull] string productId)
         {
             if (String.IsNullOrEmpty(productId)) return false;
 
@@ -30,7 +31,8 @@ namespace Kulman.WPA81.Services
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>Product price</returns>
-        public async Task<string> GetPrice(string productId)
+        [CanBeNull]
+        public async Task<string> GetPrice([NotNull] string productId)
         {
             try
             {
@@ -52,7 +54,7 @@ namespace Kulman.WPA81.Services
         /// </summary>
         /// <param name="productId">Product id</param>
         /// <returns>True on success, false otherwise</returns>
-        public async Task<bool> Purchase(string productId)
+        public async Task<bool> Purchase([NotNull] string productId)
         {
             if (String.IsNullOrEmpty(productId))
             {

@@ -1,4 +1,5 @@
 ﻿using Windows.Storage;
+using JetBrains.Annotations;
 using Kulman.WPA81.Interfaces;
 
 namespace Kulman.WPA81.Services
@@ -9,11 +10,12 @@ namespace Kulman.WPA81.Services
     public class LocaSettingsService : ISettingsService
     {
         /// <summary>
-        /// Gets a storred value for a given key
+        /// Gets a stored value for a given key
         /// </summary>
         /// <param name="key">Key</param>
         /// <returns>Value</returns>
-        public object Get(string key)
+        [CanBeNull]
+        public object Get([NotNull] string key)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))
             {
@@ -25,11 +27,11 @@ namespace Kulman.WPA81.Services
 
         /// <summary>
         /// Save a key-value pair to settings
-        /// Overwites existing
+        /// Overwrites existing
         /// </summary>
         /// <param name="key">Key</param>
         /// <param name="value">Value</param>
-        public void Set(string key, object value)
+        public void Set([NotNull] string key, [CanBeNull] object value)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))
             {
@@ -45,7 +47,7 @@ namespace Kulman.WPA81.Services
         /// Deletes value for a given key
         /// </summary>
         /// <param name="key">Key</param>
-        public void Clear(string key)
+        public void Clear([NotNull] string key)
         {
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(key))
             {
