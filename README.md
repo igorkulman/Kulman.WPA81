@@ -7,6 +7,8 @@ Collection of utilities and services for Windows Phone 8.1 XAML and Windows 8.1 
 
 ## Installation
 
+[![NuGet version](http://img.shields.io/nuget/v/Kulman.WPA81.svg?style=flat)](https://nuget.org/packages/Kulman.WPA81)  [![NuGet downloads](http://img.shields.io/nuget/dt/Kulman.WPA81.svg?style=flat)](https://nuget.org/packages/Kulman.WPA81)
+
     PM> Install-Package Kulman.WPA81
 
 ## What's included?
