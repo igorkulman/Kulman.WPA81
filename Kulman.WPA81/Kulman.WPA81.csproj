@@ -93,6 +93,7 @@
     <Compile Include="Code\DispatcherExtensions.cs" />
     <Compile Include="Code\Extensions.cs" />
     <Compile Include="Code\SortedObservableCollection.cs" />
+    <Compile Include="Code\StringIOExtensions.cs" />
     <Compile Include="Code\Tilt.cs" />
     <Compile Include="Converters\Abstract\BaseConverter.cs" />
     <Compile Include="Converters\Abstract\BaseConverterWithParameter.cs" />
