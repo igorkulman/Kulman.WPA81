@@ -112,7 +112,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DeviceInformationService.cs" />
     <Compile Include="Services\DialogService.cs" />
-    <Compile Include="Services\LocaSettingsService.cs" />
+    <Compile Include="Services\LocalSettingsService.cs" />
     <Compile Include="Services\WindowsPhoneStoreService.cs" />
   </ItemGroup>
   <ItemGroup>
