@@ -62,6 +62,26 @@ namespace Kulman.WPA81.Code
             }
         }
 
+        public static IEnumerable<TSource> DistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        {
+            HashSet<TKey> seenKeys = new HashSet<TKey>();
+            foreach (TSource element in source)
+            {
+                if (seenKeys.Add(keySelector(element)))
+                {
+                    yield return element;
+                }
+            }
+        }
+
+        public static DateTime UnixTimeStampToDateTime(int unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            var dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
+
         public static T As<T>(this object o) where T : class
         {
             return o as T;
