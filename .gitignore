@@ -175,3 +175,5 @@ FakesAssemblies/
 /tools/FAKE
 /*.nupkg
 /Kulman.WPA81/*.nupkg
+/.fake
+/packaging/*.nupkg
