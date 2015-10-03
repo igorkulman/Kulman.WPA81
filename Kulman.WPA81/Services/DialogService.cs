@@ -20,10 +20,10 @@ namespace Kulman.WPA81.Services
         /// <param name="leftButtonText">Left button text (optional)</param>
         /// <param name="rightButtonText">Right button text (optional)</param>
         /// <returns>Dialog result</returns>
-        public async Task<DialogResult> ShowMessageDialog([NotNull] string message, [NotNull] string title, [CanBeNull] string leftButtonText = null, [CanBeNull] string rightButtonText = null)
+        public async Task<DialogResult> ShowMessageDialog([NotNull] string message, [CanBeNull] string title = null, [CanBeNull] string leftButtonText = null, [CanBeNull] string rightButtonText = null)
         {
             var result = DialogResult.NothingPressed;
-            var dialog = new MessageDialog(message, title);
+            var dialog = string.IsNullOrEmpty(title) ? new MessageDialog(message) :new MessageDialog(message, title);
 
             if (!string.IsNullOrWhiteSpace(leftButtonText))
             {

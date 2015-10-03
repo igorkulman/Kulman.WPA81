@@ -14,6 +14,6 @@ namespace Kulman.WPA81.Interfaces
         /// <param name="leftButtonText">Left button text (optional)</param>
         /// <param name="rightButtonText">Right button text (optional)</param>
         /// <returns>Dialog result</returns>
-        Task<DialogResult> ShowMessageDialog([NotNull] string message, [NotNull] string title, [CanBeNull] string leftButtonText = null, [CanBeNull] string rightButtonText = null);
+        Task<DialogResult> ShowMessageDialog([NotNull] string message, [CanBeNull] string title = null, [CanBeNull] string leftButtonText = null, [CanBeNull] string rightButtonText = null);
     }
 }
