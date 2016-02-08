@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Kulman.WPA81</id>
-    <version>1.0.18</version>
+    <version>1.0.19</version>
     <title>Kulman.WPA81</title>
     <authors>Igor Kulman</authors>
     <owners></owners>
@@ -23,9 +23,7 @@
     <references></references>
     <tags></tags>
     <dependencies>    
-      <group>
-      <dependency id="JetBrains.Annotations" version="9.1.1" />
-    </group>
+     
       </dependencies>   
   </metadata>
   <files>

@@ -9,7 +9,7 @@ let buildDir = @".\build\"
 let testDir  = @".\test\"
 let packagesDir = @".\packages"
 let packagingRoot = "./packaging/"
-let packagesVersion = "1.0.18"
+let packagesVersion = "1.0.19"
 
 // Targets
 Target "Clean" (fun _ ->
